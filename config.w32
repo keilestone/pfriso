@@ -1,0 +1,7 @@
+ARG_ENABLE('pfriso', 'pfriso support', 'no');
+
+if (PHP_PFRISO != 'no') {
+	AC_DEFINE('HAVE_PFRISO', 1, 'pfriso support enabled');
+
+	EXTENSION('pfriso', 'pfriso.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
